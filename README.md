@@ -1,126 +1,79 @@
 # CODING-SKILLS
 
-> A focused, production-minded skill for AI coding agents.
+> Reusable skills for AI coding agents. Small, focused, production-minded.
 
-CODING-SKILLS provides reusable instructions that help AI coding agents write cleaner, safer, and more maintainable code. The project is intentionally lightweight: each skill is self-contained and can be added to an agent's skill directory without introducing a framework or runtime dependency.
+**CODING-SKILLS** is a collection of portable `SKILL.md` instructions that help AI coding agents write cleaner, safer, and more maintainable code.
 
-## ✨ What It Provides
+No framework. No runtime. No dependencies. Just copy a skill into your agent's skills directory and it works.
 
-The repository currently includes:
+## Skills
 
-### `rules-write-code`
+| Skill | Purpose |
+|-------|---------|
+| [`rules-write-code`](skills/rules-write-code/SKILL.md) | Mandatory standard for writing, editing, generating, and reviewing code. Enforces clean idiomatic code, meaningful names, small focused functions, DRY, explicit error handling, input validation, `why`-focused documentation, and English-only code artifacts. Applies automatically to every coding task. |
 
-A mandatory coding standard for writing, editing, generating, or refactoring code.
-
-It guides agents to:
-
-- Write clean, readable, idiomatic code
-- Prefer meaningful names and small, focused functions
-- Follow DRY and separation-of-concerns principles
-- Handle errors and edge cases explicitly
-- Validate inputs and sanitize security-sensitive data
-- Avoid dead code and unnecessary complexity
-- Add useful documentation for non-trivial code
-- Keep comments focused on **why**, not obvious implementation details
-- Use English for code artifacts, comments, documentation, logs, and error messages
-
-The skill is designed to be applied automatically whenever an agent performs a coding task.
-
-## 📁 Repository Structure
-
-```text
-CODING-SKILLS/
-└── skills/
-    └── rules-write-code/
-        └── SKILL.md
-```
-
-Each skill lives in its own directory and is defined by a `SKILL.md` file containing its metadata, trigger description, and instructions.
-
-## 🚀 Installation
-
-Clone the repository:
+## Installation
 
 ```bash
 git clone https://github.com/purujawa06-bot/CODING-SKILLS.git
 ```
 
-Then copy the skill you want into the skill directory supported by your AI coding agent.
-
-For example:
+Copy what you need:
 
 ```bash
-cp -r CODING-SKILLS/skills/rules-write-code <your-agent-skills-directory>/
+# Claude Code
+cp -r CODING-SKILLS/skills/rules-write-code ~/.claude/skills/
+
+# PuruClaw
+cp -r CODING-SKILLS/skills/rules-write-code ~/.puru/workspace/skills/
+
+# Generic agent (adjust to your agent's skills dir)
+cp -r CODING-SKILLS/skills/rules-write-code <skills-dir>/
 ```
 
-The exact installation path depends on the agent you use.
+## Usage
 
-## 🧩 Usage
+Once installed, agents that support the `SKILL.md` convention load the skill automatically.
 
-Once installed, the skill can be loaded by an AI coding agent that supports the `SKILL.md` convention.
-
-For `rules-write-code`, the intended behavior is simple:
+For `rules-write-code`:
 
 ```text
-Coding task
-    ↓
-rules-write-code
-    ↓
-Apply coding standards
-    ↓
-Generate / edit / review code
+Coding task → rules-write-code → apply standards → generate / edit / review
 ```
 
-The skill is not a library and does not need to be imported into your application.
+It is not a library — nothing to import into your app.
 
-## 🎯 Design Principles
-
-CODING-SKILLS is built around a few simple principles:
-
-**Focused** — Skills should solve a specific problem instead of becoming a large instruction dump.
-
-**Practical** — Rules should improve real coding workflows, not add ceremony for its own sake.
-
-**Reusable** — Skills should be portable across AI coding agents that support the `SKILL.md` format.
-
-**Maintainable** — Instructions should be clear enough to evolve as coding practices and agent capabilities change.
-
-## 🤖 Compatibility
-
-The skills are written as portable Markdown instructions and are intended for AI coding agents that support the `SKILL.md` skill format.
-
-Compatibility may vary between agents depending on how they discover and load skills.
-
-## 🛠️ Adding a Skill
-
-To add a new skill:
-
-1. Create a directory under `skills/`.
-2. Add a `SKILL.md` file.
-3. Define the skill metadata and instructions.
-4. Keep the scope focused and the instructions actionable.
-5. Update this README when the repository gains a meaningful new capability.
-
-Example:
+## Repository Structure
 
 ```text
-skills/
-├── rules-write-code/
-│   └── SKILL.md
-└── your-new-skill/
-    └── SKILL.md
+CODING-SKILLS/
+├── skills/
+│   └── rules-write-code/
+│       └── SKILL.md
+├── LICENSE
+└── README.md
 ```
 
-## 📌 Philosophy
+Each skill is self-contained: one directory, one `SKILL.md` with frontmatter (`name`, `description`) plus instructions.
 
-Good AI coding assistance is not only about generating code quickly. It should also encourage consistency, readability, maintainability, and predictable engineering practices.
+## Design Principles
 
-CODING-SKILLS keeps those expectations in small, reusable building blocks so they can be applied wherever the agent is working.
+- **Focused** — one skill, one job. No instruction dumps.
+- **Practical** — improves real workflows, no ceremony.
+- **Portable** — plain Markdown, works across agents that support `SKILL.md`.
+- **Maintainable** — short enough to evolve with practice.
 
-## 📄 License
+## Contributing
 
-See the repository license file for licensing information.
+1. Create `skills/<your-skill>/SKILL.md` with `name` + `description` frontmatter.
+2. Keep scope tight and instructions actionable.
+3. Update this README's Skills table.
+4. Open a PR.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built for AI-assisted software development by [purujawa06-bot](https://github.com/purujawa06-bot).
+Built for AI-assisted development by [purujawa06-bot](https://github.com/purujawa06-bot).
