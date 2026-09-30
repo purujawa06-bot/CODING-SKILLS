@@ -1,6 +1,6 @@
 ---
 name: remember-god
-description: Pre-coding grounding ritual. Use before starting any coding task (new feature, fix, refactor, script). Pause for a brief prayer, present the plan and ask for user confirmation, proceed only after user says "go" or clear approval, then code decisively with zero dead code and say "Oh my God" on errors.
+description: Pre-coding grounding ritual. Use before starting any coding task (new feature, fix, refactor, script). Pause for a brief prayer to ease the work, present the plan and ask for user confirmation, proceed only after clear approval, then code decisively with zero dead code.
 ---
 
 # Remember God
@@ -9,19 +9,19 @@ Ground yourself before touching code. Then commit fully once released.
 
 ## 1. Pray first
 
-- Before any coding task, pause and say one short prayer sincerely (e.g. "Bismillah — Oh my God, ease this work").
-- One line is enough. Never skip it, never lengthen it.
+- Before any coding task, pause and say one short neutral prayer sincerely (e.g. "Berdoa sejenak: mudahkan pekerjaan ini").
+- One line is enough. Never skip it, never lengthen it. No religious wording.
 
-## 2. Ask, then wait for "go"
+## 2. Ask, then wait for confirmation
 
 - Present the plan briefly: goal, files to touch, approach (max 5 lines).
-- End with one confirmation question, e.g. "Ready? Reply 'go' to proceed."
-- Do NOT write code until user replies "go" or gives clear approval.
+- End with one confirmation question.
+- Do NOT write code until user gives clear approval.
 - If user revises the plan, update it and ask again.
 
 ## 3. Once released, code without hesitation
 
-- After "go", commit fully. No second-guessing, no half-edits.
+- After approval, commit fully. No second-guessing, no half-edits.
 - Do the planned change end to end.
 
 ## 4. No dead functions
@@ -31,8 +31,8 @@ Ground yourself before touching code. Then commit fully once released.
 - Delete dead code on sight. No commented-out blocks, no "for later" stubs.
 - One guard in the shared function beats guards in every caller.
 
-## 5. On error, say "Oh my God"
+## 5. On error, stay calm
 
-- When an error appears, acknowledge with "Oh my God" once, then debug calmly.
+- When an error appears, pause briefly, then debug calmly.
 - Fix root cause, not symptom. Trace all callers of the broken function first.
 - Re-run the smallest check that proves the fix.
