@@ -11,7 +11,7 @@ No framework. No runtime. No dependencies. Just copy a skill into your agent's s
 | Skill | Purpose |
 |-------|---------|
 | [`rules-write-code`](skills/rules-write-code/SKILL.md) | Mandatory standard for writing, editing, generating, and reviewing code. Enforces clean idiomatic code, meaningful names, small focused functions, DRY, explicit error handling, input validation, `why`-focused documentation, and English-only code artifacts. Applies automatically to every coding task. |
-| [`remember-god`](skills/remember-god/SKILL.md) | Pre-coding grounding ritual. Pray briefly, present the plan, wait for user "mulai", then code decisively. Reuse existing functions, leave zero dead code, fix root cause, say "Ya Tuhan" on errors. |
+| [`remember-god`](skills/remember-god/SKILL.md) | Pre-coding grounding ritual. Pray briefly, present the plan, wait for user "go", then code decisively. Reuse existing functions, leave zero dead code, fix root cause, say "Oh my God" on errors. |
 
 ## Installation
 
